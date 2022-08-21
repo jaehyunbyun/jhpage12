@@ -1,0 +1,93 @@
+.header{
+    .logo-area{
+        position: fixed;
+        top: 0;left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+        font-family: 'teko';
+        box-sizing: border-box;
+        z-index: 10;
+    }
+    .logo{
+        font-size: 47px;
+        transition: 0.3s;
+    }
+    .service-list{
+        display: flex;
+        font-size: 30px;
+    }
+    .service-item{
+        padding: 10px 0;
+        &.contact{
+            width: 100px;
+            padding: 10px 0;
+            color: #fff;
+            border-radius: 50%;
+            text-align: center;
+
+            background: #000;
+            transition: 0.3s;
+        }
+        &+.service-item{
+            margin-left: 30px;
+        }
+    }
+    .link-service{
+        transition: 0.3s;
+        display: block;
+        height: 100%;
+
+        // &::after{
+        //     content: '';
+        //     display: block;
+        //     width: 100%;
+        //     height: 2px;
+        //     background: #000;
+        // }
+    }
+    .work{
+        &::after{
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: #000;
+            transition: 0.3s;
+        }
+    }
+
+    &.active{
+        .logo-area{
+            color: #fff;
+
+        }
+        .contact{
+            color: #000;
+            background: #fff;
+        }
+        .work{
+            &::after{
+                background: #fff;
+            }
+        }
+    }
+    // &.active{
+    //     width: 100%;height: 100%;
+    //     position: fixed;
+    //     top: 0;left: 0;
+    //     z-index: 3;
+    //     .logo-area{
+    //         background: #000;
+    //         color: #fff;
+    //     }
+    //     .link-service{
+    //         &::after{
+    //             background: #fff;
+    //         }
+    //     }
+    // }
+
+}
